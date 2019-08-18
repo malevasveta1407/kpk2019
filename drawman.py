@@ -8,6 +8,9 @@ def init_drawman():
     y_current = 0
     t.goto(x_current, y_current)
 
+
+
+
 def drawman_scale(scale):
     global _drawman_scale
     _drawman_scale = scale
@@ -33,7 +36,7 @@ def on_vector(dx, dy):
     to_point(x_current + dx, y_current + dy)
 
 def to_point(x, y,):
-    global x_current, y_current
+    global x_current, y_current, _drawman_scale
     x_current = x
     y_current = y
     t.goto(_drawman_scale*x_current, _drawman_scale*y_current)
